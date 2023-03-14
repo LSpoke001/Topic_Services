@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.simpleService.setOnClickListener {
             Toast.makeText(this, "WORK", Toast.LENGTH_SHORT).show()
+            stopService(MyForegroundService.newIntent(this))
             startService(MyService.newIntent(this, 5))
         }
         binding.foregroundService.setOnClickListener {
