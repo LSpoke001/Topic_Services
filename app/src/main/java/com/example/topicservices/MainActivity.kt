@@ -33,5 +33,12 @@ class MainActivity : AppCompatActivity() {
                 MyForegroundService.newIntent(this)
             )
         }
+        binding.intentService.setOnClickListener {
+            Toast.makeText(this, "WORK", Toast.LENGTH_SHORT).show()
+            ContextCompat.startForegroundService(
+                this,
+                MyIntentService.newIntent(this)
+            )
+        }
     }
 }
