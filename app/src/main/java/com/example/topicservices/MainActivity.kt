@@ -1,8 +1,8 @@
 package com.example.topicservices
 
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import com.example.topicservices.databinding.ActivityMainBinding
 
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.simpleService.setOnClickListener {
             Toast.makeText(this, "WORK", Toast.LENGTH_SHORT).show()
-            startService(MyService.newIntent(this))
+            startService(MyService.newIntent(this, 5))
         }
     }
 }
