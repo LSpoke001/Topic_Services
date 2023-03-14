@@ -25,7 +25,7 @@ class MyService : Service() {
                 log("Timer $i")
             }
         }
-        return START_REDELIVER_INTENT
+        return START_STICKY
     }
 
     override fun onDestroy() {
